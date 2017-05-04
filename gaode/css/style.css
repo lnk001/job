@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding:0;
+}
+
+html,body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-family: "Microsoft YaHei",SimSun,"Arial Narrow",HELVETICA,sans-serif;
+	background:#fff;
+	overflow-x: hidden;	
+	
+}
+body {
+	Font-size:62.5%;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	cursor:pointer;
+	color:#369adf;
+}
+a:hover {
+	color:#369adf;
+}
+
+img {
+	border: 0;
+}
+
+fl{ float:left}
+fr{ float:right}
+.mt20{ margin-top:20px;}
+.pl15{ padding-left:15px;}
+
+
+.font16{ font-size:1.6em }
+.font18{ font-size:1.8em }
+.font20{ font-size:2em }
+.font_text{ font-size:1.8em }
+.font_c_999{ color:#999}
+
+.font_bold{ font-weight:bold;}
+
+
+.pagebox{ margin:15px;}
+
+.swiper-container {
+	width: 100%;
+	height: auto;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+}
+.swiper-container .swiper-slide {
+	height: 280px;
+	line-height: 280px;
+}
+
+@media screen and (min-width: 1281px) {
+	.font_text{ font-size:3em } 
+	.swiper-container .swiper-slide {
+		height: 800px;
+		line-height: 800px;
+	}
+} 
+/* css注释：设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */ 
+
+@media screen and (max-width: 1280px) { 
+	.font_text{ font-size:2.8em }
+	.swiper-container .swiper-slide {
+		height: 700px;
+		line-height: 700px;
+	}
+} 
+/* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */ 
+
+@media screen and (max-width: 1024px) { 
+	.font_text{ font-size:2.4em }
+	.swiper-container .swiper-slide {
+		height: 520px;
+		line-height: 520px;
+	}
+/* 设置了浏览器宽度不大于901px时 abc 显示200px宽度 */ 
+}
+
+@media screen and (max-width: 768px) { 
+	.font_text{ font-size:1.6em }
+	.swiper-container .swiper-slide {
+		height: 280px;
+		line-height: 280px;
+	}
+/* 设置了浏览器宽度不大于768px时 abc 显示200px宽度 */ 
+}
+@media screen and (max-width: 480px) { 
+	.font_text{ font-size:1.4em }
+	.swiper-container .swiper-slide {
+		height: 240px;
+		line-height: 240px;
+	}
+/* 设置了浏览器宽度不大于480px时 abc 显示200px宽度 */ 
+}
+.dialog{
+	position: fixed;
+	display:none;
+	z-index:1;
+	top: 25%;
+	left: 15%;
+	width:70%;
+	height:auto;
+	border:1px solid #8c9faa;
+	border-radius:2px;
+	font-size: 14px;
+	background-color:#fff;
+	word-wrap: break-word;
+}	
+.dialog p{ padding:5px 10px;}
+.dialog p.c_btn{ text-align:right;}
+
+/*手机端下载app引导页*/
+.wxtip{background: rgba(0,0,0,0.8); text-align: center; position: fixed; left:0; top: 0; width: 100%; height: 100%; z-index: 998; display: none;}
+.wxtip-icon{width: 52px; height: 67px; background: url(../images/weixin-tip.png) no-repeat; display: block; position: absolute; right: 30px; top: 20px;}
+.wxtip-txt{padding-top: 107px; color: #fff; font-size: 16px; line-height: 1.5;}
+
+
+

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<title>斯柯达</title>
+<style>
+* {margin:0;padding:0}
+body {font-size:12px;background:#efefef;}
+body > a {display:none}
+a {text-decoration:none;outline:none}
+img {vertical-align:middle}
+ul,li{list-style-type:none;}	
+section > img { margin-top:-1px;}
+.clearfix:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+.mt15 {margin-top:15px;}
+
+.page {margin:0 auto;max-width:640px;}
+.form {margin:20px 0;}
+.form-horizontal { width: 94%; display: inline-block; margin-left:3%; }
+.form-horizontal .form-group input,.form-horizontal .form-group select {width: 31%; float: left; display: block; height:28px; line-height: 28px; padding:5px; margin: 0 10px 10px 0; box-sizing: border-box; color: #5e5653; border:none}
+#autotype,#dealers{margin: 0 0 10px 0;}	
+#submit{width: 110px; height: 40px; line-height: 40px; background: #e70012; display: block; margin: 0 auto; color: #fff; font-weight: bold; font-size:20px; text-align: center}
+.tab{margin-bottom: 40px}
+.menu,.cont{width: 94%; display: inline-block; margin-left:3%;}	
+.menu li{width:33.33%; box-sizing: border-box; height:30px; text-align:center; line-height:30px; float:left;}
+.menu li span{display: block; width: 80%; margin: 0 auto; color: #000; background: #ecbfc4;position: relative;}
+/*下三角*/  
+.menu li span .entry-trangle-bottom{  
+	position:absolute;  
+	bottom:-5px;  
+	left:50%;
+	margin-left: -10px;
+	width:0;  
+	height:0;  
+	border-left:10px solid transparent;  
+	border-right:10px solid transparent;  
+	border-top:10px solid #ecbfc4;  
+} 	
+.menu li span:hover, .menu li span.on{background: #e70012; color: #fff }	
+.menu li span:hover .entry-trangle-bottom,.menu li span.on .entry-trangle-bottom{border-top:10px solid #e70012; }	
+.cont{margin-top: 10px;width: 88%; margin-left:6% }
+.cont ul{width: 100%}
+.cont ul li{width:33.33%; box-sizing: border-box; height:25px; line-height:25px; float:left; text-align: center}
+.cont ul li.head{background: #e70012; color: #fff; }
+</style>
+</head>
+
+<body>
+<div class="page">
+    <section><img src="sikeda_xn201705/img_01.jpg" width="100%"></section>
+    <section><img src="sikeda_xn201705/img_02.jpg" width="100%"></section>
+    <section class="form">
+    	<form method="post" id="myform" name="myform" action="">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="familyname" placeholder="您的姓名">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="mobile" placeholder="您的手机">
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="autotype">
+                    	<option value="">意向车型</option>
+                        <option value="朗逸">朗逸</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="province">
+                    	<option value="">请选择省</option>
+                    	<option value="500000">云南省</option>
+                        <option value="520000">贵州省</option>
+                        <option value="450000">广西壮族自治区</option>
+                    </select>
+                    <select class="form-control" id="city">
+                    	<option value="">请选择市</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="dealers">
+                    	<option value="">经销商</option>
+                    </select>
+                </div>
+            </div>
+            <div class="btn-group">
+                <a href="javascript:;" id="submit">马上报名</a>
+            </div>
+        </form>
+    </section>
+    <section><img src="sikeda_xn201705/img_04.jpg" width="100%"></section>
+	<div class="tab"> 
+		<ul class="menu">
+			<li ><span class="on"><div class="entry-trangle-bottom"></div>云南</span></li>
+			<li><span><div class="entry-trangle-bottom"></div>广西</span></li>
+			<li><span><div class="entry-trangle-bottom"></div>贵州</span></li>
+		</ul>
+		<div class="cont">
+			<ul>
+				<li class="head">地级市</li><li class="head">经销商</li><li class="head">热销电话</li>
+				<li>昆明市</li><li>英茂商务</li><li>0871-65738115</li>
+				<li>昆明市</li><li>中致远</li><li>0871-64585111</li>
+				<li>昆明市</li><li>云南众锐</li><li>0871-68191678</li>
+				<li>昆明市</li><li>英茂悦众</li><li>0871-68315088</li>
+				<li>昆明市</li><li>众锐金泉</li><li>0871-65098770</li>
+				<li>昆明市</li><li>云南合众</li><li>0871-65168086</li>
+				<li>昆明市</li><li>昆明众合盛</li><li>0871-67160788</li>
+				<li>曲靖市</li><li>曲靖麒麟</li><li>0874-3016016</li>
+				<li>曲靖市</li><li>曲靖靖丰</li><li>0874-8870333</li>
+				<li>景洪市</li><li>版纳众远</li><li>0691-2750566</li>
+				<li>大理市</li><li>大理春风</li><li>0872-2328800</li>
+				<li>保山市</li><li>保山悦驰</li><li>0875-2145666</li>
+				<li>玉溪市</li><li>玉溪金恒</li><li>0877-2665622</li>
+				<li>昭通市</li><li>昭通华路</li><li>0870-2122000</li>
+				<li>文山市</li><li>文山恒宇</li><li>0876-2627999</li>
+				<li>普洱市</li><li>普洱鸿达</li><li>0879-2185111</li>
+				<li>丽江市</li><li>丽江锦锐</li><li>0888-5301555</li>
+				<li>楚雄市</li><li>楚雄众合盛</li><li>0878-3853888</li>
+				<li>临沧市</li><li>临沧诺众</li><li>0883-2169111</li>
+			</ul>
+		</div>
+		<div class="cont" style="display:none;">
+			<ul>
+				<li class="head">地级市</li><li class="head">经销商</li><li class="head">热销电话</li>
+				<li>南宁市</li><li>广汇广西弘德</li><li>0771-4516417</li>
+				<li>南宁市</li><li>广西圣荣</li><li>0771-5654668</li>
+				<li>南宁市</li><li>广西建汇</li><li>0771-3216611</li>
+				<li>南宁市</li><li>广西众源</li><li>0771-3113311</li>
+				<li>南宁市</li><li>广西金晟源</li><li>0771-4739868</li>
+				<li>柳州市</li><li>广汇柳州建润</li><li>0772-3166555</li>
+				<li>柳州市</li><li>柳州桂鹏</li><li>0772-2603330</li>
+				<li>桂林市</li><li>桂林东明</li><li>0773-5839980</li>
+				<li>桂林市</li><li>桂林博远</li><li>0773-2662988</li>
+				<li>北海市</li><li>北海建润</li><li>0779-2231000</li>
+				<li>百色市</li><li>百色联众</li><li>0776-2222266</li>
+				<li>梧州市</li><li>梧州众顺达</li><li>0774-3892888</li>
+				<li>玉林市</li><li>玉林通承</li><li>0775-2389238</li>
+				<li>河池市</li><li>河池和润</li><li>0778-2239888</li>
+				<li>贵港市</li><li>贵港中瑞</li><li>0775-5957777</li>
+				<li>钦州市</li><li>钦州建汇</li><li>0777-5985566</li>
+			</ul>
+		</div>
+		<div class="cont" style="display:none;">
+			<ul>
+				<li class="head">地级市</li><li class="head">经销商</li><li class="head">热销电话</li>
+				<li>贵阳</li><li>贵州顺元</li><li>0851-83800121</li>
+				<li>贵阳</li><li>致远利信</li><li>0851-83809000</li>
+				<li>贵阳</li><li>华通众源</li><li>0851-84728777</li>
+				<li>贵阳</li><li>华通华盛</li><li>0851-88329222</li>
+				<li>遵义</li><li>遵义申众</li><li>0851-28634998</li>
+				<li>遵义</li><li>遵义大汇众</li><li>0851-27700511</li>
+				<li>遵义</li><li>遵义申汇</li><li>0851-28920777</li>
+				<li>六盘水市</li><li>六盘水圣恒</li><li>0858-8233555</li>
+				<li>六盘水市</li><li>六盘水恒信</li><li>0858-8194666</li>
+				<li>铜仁市</li><li>铜仁恒信</li><li>0856-83234333</li>
+				<li>毕节</li><li>毕节黔西北</li><li>0857-8986000</li>
+				<li>安顺</li><li>安顺恒信</li><li>0851-33746888</li>
+				<li>黔西南</li><li>兴义恒信</li><li>0859-3734999</li>
+				<li>黔南</li><li>贵州汇海</li><li>0854-8338888</li>
+				<li>黔东南</li><li>凯里佳成</li><li>0855-8585191</li>
+			</ul>
+		</div> 
+	</div>
+</div>	
+<script src="//cdn.optaim.com/js/jquery-2.1.1.js"></script>
+<script>
+$(function(){
+	/*var width = $('.page').width()-146;console.log(width)
+	$('#familyname,#mobile,#autotype,#dealers').width(width+'px');
+	$('#province,#city').width(parseInt(width/2-7)+'px');
+	$('#province').css('right',parseInt(width/2+10)+'px');*/
+	
+	//标签
+	$(".menu li span").click(function(){   
+	  var Num=$(this).index("span");
+	  $(".menu li span").removeClass("on").eq(Num).addClass("on");
+	  $(".cont").hide().eq(Num).show();  
+	});  
+})
+
+var cityData = [
+	{'pid':'500000','id':'500101','name':'昆明市'},
+	{'pid':'500000','id':'500102','name':'曲靖市'},
+	{'pid':'500000','id':'500103','name':'景洪市'},
+	{'pid':'500000','id':'500104','name':'大理市'},
+	{'pid':'500000','id':'500105','name':'保山市'},
+	{'pid':'500000','id':'500106','name':'玉溪市'},
+	{'pid':'500000','id':'500107','name':'昭通市'},
+	{'pid':'500000','id':'500108','name':'文山市'},
+	{'pid':'500000','id':'500109','name':'普洱市'},
+	{'pid':'500000','id':'500110','name':'丽江市'},
+	{'pid':'500000','id':'500111','name':'楚雄市'},
+	{'pid':'500000','id':'500112','name':'临沧市'},
+
+
+	{'pid':'520000','id':'520100','name':'贵阳市'},
+	{'pid':'520000','id':'520300','name':'遵义市'},
+	{'pid':'520000','id':'520200','name':'六盘水市'},
+	{'pid':'520000','id':'522200','name':'铜仁市'},
+	{'pid':'520000','id':'522400','name':'毕节市'},
+	{'pid':'520000','id':'523100','name':'安顺市'},
+	{'pid':'520000','id':'523200','name':'黔西南'},
+	{'pid':'520000','id':'523201','name':'黔南'},
+	{'pid':'520000','id':'523202','name':'黔东南'},
+
+	{'pid':'450000','id':'450100','name':'南宁市'},
+	{'pid':'450000','id':'450200','name':'柳州市'},
+	{'pid':'450000','id':'450300','name':'桂林市'},
+	{'pid':'450000','id':'450500','name':'北海市'},
+	{'pid':'450000','id':'450600','name':'百色市'},
+	{'pid':'450000','id':'450700','name':'梧州市'},
+	{'pid':'450000','id':'450900','name':'玉林市'},
+	{'pid':'450000','id':'450901','name':'河池市'},
+	{'pid':'450000','id':'450902','name':'贵港市'},
+	{'pid':'450000','id':'450903','name':'钦州市'}
+	
+	]
+	$('#province').on('change',function(){
+		var _pid = $(this).val();
+		var _option = '<option data-pid="" value="">请选择市</option>';
+		for(var i=0;i<cityData.length;i++){
+			if(cityData[i].pid==_pid){
+				_option += '<option data-pid="'+cityData[i].pid+'" value="'+cityData[i].id+'">'+cityData[i].name+'</option>';
+			}
+		}
+		$('#city').html(_option);
+		$('#dealers').val('');
+		$('#dealers').html('<option data-pid="" value="">经销商</option>');
+	})
+var dealerData = [
+	{'city':'昆明市','cid':'500101','dealer':'英茂商务'},
+	{'city':'昆明市','cid':'500101','dealer':'中致远'},
+	{'city':'昆明市','cid':'500101','dealer':'云南众锐'},
+	{'city':'昆明市','cid':'500101','dealer':'英茂悦众'},
+	{'city':'昆明市','cid':'500101','dealer':'众锐金泉'},
+	{'city':'昆明市','cid':'500101','dealer':'云南合众'},
+	{'city':'昆明市','cid':'500101','dealer':'昆明众合盛'},
+	{'city':'曲靖市','cid':'500102','dealer':'曲靖麒麟'},
+	{'city':'曲靖市','cid':'500102','dealer':'曲靖靖丰'},
+	{'city':'景洪市','cid':'500103','dealer':'版纳众远'},
+	{'city':'大理市','cid':'500104','dealer':'大理春风'},
+	{'city':'保山市','cid':'500105','dealer':'保山悦驰'},
+	{'city':'玉溪市','cid':'500106','dealer':'玉溪金恒'},
+	{'city':'昭通市','cid':'500107','dealer':'昭通华路'},
+	{'city':'文山市','cid':'500108','dealer':'文山恒宇'},
+	{'city':'普洱市','cid':'500109','dealer':'普洱鸿达'},
+	{'city':'丽江市','cid':'500110','dealer':'丽江锦锐'},
+	{'city':'楚雄市','cid':'500111','dealer':'楚雄众合盛'},
+	{'city':'临沧市','cid':'500112','dealer':'临沧诺众'},
+
+
+	{'city':'贵阳市','cid':'520100','dealer':'贵州顺元'},
+	{'city':'贵阳市','cid':'520100','dealer':'致远利信'},
+	{'city':'贵阳市','cid':'520100','dealer':'华通众源'},
+	{'city':'贵阳市','cid':'520100','dealer':'华通华盛'},
+	{'city':'遵义市','cid':'520300','dealer':'遵义申众'},
+	{'city':'遵义市','cid':'520300','dealer':'遵义大汇众'},
+	{'city':'遵义市','cid':'520300','dealer':'遵义申汇'},
+	{'city':'六盘水市','cid':'520200','dealer':'六盘水圣恒'},
+	{'city':'六盘水市','cid':'520200','dealer':'六盘水恒信'},
+	{'city':'铜仁市','cid':'522200','dealer':'铜仁恒信'},
+	{'city':'毕节市','cid':'522400','dealer':'毕节黔西北'},
+	{'city':'安顺市','cid':'523100','dealer':'安顺恒信'},
+	{'city':'黔西南','cid':'523200','dealer':'兴义恒信'},
+	{'city':'黔南','cid':'523201','dealer':'贵州汇海'},
+	{'city':'黔东南','cid':'523202','dealer':'凯里佳成'},
+
+	{'city':'南宁市','cid':'450100','dealer':'广汇广西弘德'},
+	{'city':'南宁市','cid':'450100','dealer':'广西圣荣'},
+	{'city':'南宁市','cid':'450100','dealer':'广西建汇'},
+	{'city':'南宁市','cid':'450100','dealer':'广西众源'},
+	{'city':'南宁市','cid':'450100','dealer':'广西金晟源'},
+	{'city':'柳州市','cid':'450200','dealer':'广汇柳州建润'},
+	{'city':'柳州市','cid':'450200','dealer':'柳州桂鹏'},
+	{'city':'桂林市','cid':'450300','dealer':'桂林东明'},
+	{'city':'桂林市','cid':'450300','dealer':'桂林博远'},
+	{'city':'北海市','cid':'450500','dealer':'北海建润'},
+	{'city':'百色市','cid':'450600','dealer':'百色联众'},
+	{'city':'梧州市','cid':'450700','dealer':'梧州众顺达'},
+	{'city':'玉林市','cid':'450900','dealer':'玉林通承'},
+	{'city':'河池市','cid':'450901','dealer':'河池和润'},
+	{'city':'贵港市','cid':'450902','dealer':'贵港中瑞'},
+	{'city':'钦州市','cid':'450903','dealer':'钦州建汇'}
+	
+	
+	]
+	$('#city').on('change',function(){
+		var _cid = $(this).val();
+		var _dealer = '';
+		for(var i=0;i<dealerData.length;i++){
+			if(dealerData[i].cid==_cid){
+				_dealer += '<option data-pid="'+dealerData[i].cid+'">'+dealerData[i].dealer+'</option>';
+			}
+			$('#dealers').html(_dealer);
+		}
+	})
+var url = window.location.search;
+	if(url.indexOf('?')>-1)
+		var siteid = url.substr(1).match(/(^|&)_id=(\d+)/)[2];
+	else
+		var siteid = 60;
+
+$('#submit').on('click',function(){
+	var re_name=/[\u4E00-\u9FA5]{2,5}/g;
+	var re_phone = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+	var _name = $.trim($('#familyname').val()),
+		_phone = $.trim($('#mobile').val()),
+		_autotype = $.trim($('#autotype').val()),
+		_province = $.trim($('#province').val()),
+		_city = $.trim($('#city').val()),
+		_dealers = $.trim($('#dealers').val());
+	
+	if(!_name || !re_name.test(_name)){
+		alert('请填写正确的姓名，2~5个汉字');
+		return false;
+	}else if(!_phone || !re_phone.test(_phone)){
+		alert('请填写正确的手机号码');
+		return false;
+	}else if(!_autotype){
+		alert('请选择车型');
+		return false;
+	}else if(!_province){
+		alert('请选择省份');
+		return false;
+	}else if(!_city){
+		alert('请选择市');
+		return false;
+	}else if(!_dealers){
+		alert('请选择经销商');
+		return false;
+	}else{
+		var params = {
+			'username':_name, 
+			'phone':_phone, 
+			'province':$('#province option:selected').text(),
+			'city':$('#city option:selected').text(),
+			'deals':_dealers,
+			'vehicle':_autotype,
+			'gender':'7', 'siteid':siteid, 'sms':0
+		};
+		$.post('/autoSubmit.php', params, function(data){
+			var msg = '';
+			switch(data.status)
+			{
+				case 0 : msg = '提交成功'; break;
+				case 1 : msg = '已经提交过了'; break;
+				default : msg = '提交失败，请稍后重试'; break;
+			}
+			window.alert(msg);
+		}, 'json')
+	}
+})
+</script>
+</body>
+</html>

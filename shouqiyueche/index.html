@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<title>首汽约车</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+<link rel="stylesheet" href="css/index.css">
+
+</head>
+<body class="bodybox">
+<div class="wrap" id="wrap">
+    <div class="item item-1">
+        <div class="box">
+        	<div id="banner">
+                <video id="vedioplay" controls preload="auto" src="images/video.mp4" poster="images/video-bg.jpg" x-webkit-airplay="true" webkit-playsinline="true"></video>
+            </div>
+            <section class="mod_container">
+            	<div class="sprite"></div>
+            </section>
+        </div>
+    </div>
+
+    <div class="item item-2">
+        <div class="box">
+        	<div class="sprite"></div>	
+        </div>
+    </div>
+
+    <div class="item item-3">
+        <div class="box">
+			<div class="sprite"></div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/iSlider.js"></script> 
+
+<script>
+var myslider=new iSlider({
+    wrap:'#wrap',
+    item:'.item',
+    onslide:function (index) {
+        if (index == 2) {
+            document.getElementById('J_joinNum').innerHTML=parseInt(Math.random()*10000);
+        }
+    }
+});
+console.info(myslider)
+</script>
+</body>
+</html>

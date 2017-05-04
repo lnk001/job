@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>限时秒杀</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<link rel="stylesheet" type="text/css" href="css/instantSale.css" />
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/instantSale.js"></script>
+
+</head>
+<body>
+	<a name="top"></a>
+	<div class="page-item banner-item">
+		 <img src="images/source/first-frame.jpg" />
+	</div>
+	<div class="price-item">
+		<div class="price-tab">
+			<em>¥298</em>
+			<span>
+				<label>原价</label>
+				<label id="old_price">¥0</label>
+			</span>
+			<span>
+				<label>折扣</label>
+				<label>1</label>
+			</span>
+			<span>
+				<label>节省</label>
+				<label id="dec_price">¥0</label>
+			</span>
+		</div>
+		<div class="amount-tab">
+			<span class="timmer">
+				<em id="day" >00</em>天
+				<em id="hour">00</em>小时
+				<em id="min">00</em>分钟
+				<em id="sec">00</em>秒
+			</span>
+			<span class="amount">
+				已有<em id="buy_count">882</em>人购买
+			</span>
+		</div>
+		<div class="btn-tab">
+			<a class="btn-buy" href="javascript:void(0);">立即购买</a>
+		</div>
+	</div>
+	<div class="page-item detail-item">
+		<h2>产品介绍</h2>
+		<p class="detail-content"><b>活动说明</b><br/>[JEDIR 官方首发秒杀活动 限时秒杀]专柜正品JEDIR时尚钢带表，线下零售价2980元，活动期间仅需货到付款298元，每天限量发售100只，原装正品，7天无理由退换，30天只换不修。时间不等人，赶快抢吧！</p>
+		<p class="detail-pic">
+			<!--<img class="lazy-img" data-src="http://res.viewlayer.cn/ebiz/logistics/sf.jpg" />-->
+			<img class="lazy-img" data-src="images/source/01.jpg" />
+			<img class="lazy-img" data-src="images/source/02.jpg" />
+			<img class="lazy-img" data-src="images/source/03.jpg" />
+			<img class="lazy-img" data-src="images/source/04.jpg" />
+			<img class="lazy-img" data-src="images/source/05.jpg" />
+			<img class="lazy-img" data-src="images/source/06.jpg" />
+			<img class="lazy-img" data-src="images/source/07.jpg" />
+			<img class="lazy-img" data-src="images/source/08.jpg" />
+			<img class="lazy-img" data-src="images/source/09.jpg" />
+			<img class="lazy-img" data-src="images/source/10.jpg" />
+			<img class="lazy-img" data-src="images/source/11.jpg" />
+			<img class="lazy-img" data-src="images/source/12.jpg" />
+			<img class="lazy-img" data-src="images/source/13.jpg" />
+			<img class="lazy-img" data-src="images/source/14.jpg" />
+			<img class="lazy-img" data-src="images/source/15.jpg" />
+		</p>
+	</div>
+	<p class="comment-title">最新评论</p>
+	<div class="comment">
+		<div class="comment-inner">
+				<div class="comment-name">159****2381 蔡先生发表评论 </div>
+				<div class="comment-content">终于抢了一只，一直想要只这样的钢表，哈哈，很好很强大！</div>
+				<div class="comment-name">130****2553 陆先生发表评论 </div>
+				<div class="comment-content">关注JEDIR这个牌子也有段时间了，终于做活动了，支持！！！</div>
+				<div class="comment-name">135****0933 田先生发表评论</div>
+				<div class="comment-content">快递给力，怎么可能，当天就到了，检验为正品，上班中，晚点再评</div>
+				<div class="comment-name">189****1820 陈先生发表评论</div>
+				<div class="comment-content">之前卖的太贵了，抢了3天才抢到一个，哈哈，还能再参加吗</div>
+				<div class="comment-name">139****7525 丁先生发表评论 </div>
+				<div class="comment-content">收到货了，支持JEDIR的手表也很久了，这次也没让我失望</div>
+				<div class="comment-name">138****8622 刘先生发表评论</div>
+				<div class="comment-content">抢到了，太喜欢了，这个价格，表带做工超出我的期望，赞</div>
+				<div class="comment-name">189****9477 文先生发表评论</div>
+				<div class="comment-content">山东烟台抢到一只，特此发来贺电</div>
+				<div class="comment-name">134****7300 贝先生发表评论 </div>
+				<div class="comment-content">只抢到一只，送老丈人了，我自己没抢到，伤心</div>
+				<div class="comment-name">137****5782 梁先生发表评论</div>
+				<div class="comment-content">盒子很漂亮，包装完美，老板用心了，祝生意火火</div>
+				<div class="comment-name">180****9903 黎先生发表评论</div>
+				<div class="comment-content">这款爆款上几天刚在官网买了一只，今日看到活动，果断抢了，无条件退货官网那只，嘿嘿</div>
+				<div class="comment-name">137****3345 李小姐发表评论</div>
+				<div class="comment-content">老公的生日礼物，这活动太及时了吧，200多搞定送什么礼物这件烦心事</div>
+				<div class="comment-name">150****9633 罗先生发表评论</div>
+				<div class="comment-content">上次送保养套装的活动还搞吗？上次没抢到</div>
+			</div>
+	</div>
+	<div class="info">本活动最终解析权归 嘉兴市弘鑫网络科技有限公司<br /></div>
+	<a href="#top" class="totop"></a>
+	<div class="btn-item btn-buy">
+		<a href="javascript:void(0)">立即购买</a>
+	</div>
+	<script type="text/javascript">
+	$(".btn-buy").on("click",function(){
+		window.location.href = "buy.html";
+	})
+	</script>
+</body>
+</html>

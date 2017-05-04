@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>限时秒杀</title>
+    <link rel="stylesheet" type="text/css" href="css/phone-reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/buy.css" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/region.js"></script>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        var u = navigator.userAgent;
+        if ((u.indexOf("iPhone") > -1 || u.indexOf("iPad") > -1) && window.devicePixelRatio >= 2) {
+            document.body.setAttribute("class", "ios");
+        }
+    </script>
+    <div class="wrapper">
+        <p class="header">收货人信息</p>
+        <form action="/index.php?controller=detail&action=submit&check=aaff27d10b6b1d5bc9cdcc5cb243ebd1&token=dbce3ecba1dc924xp91fege3e4b4bfap" method="post">
+            <div class="content-info">
+                <div class="content-info-inner">
+                    <label>收货人</label>
+                    <p>
+                        <input id="name" name="name" type="text" />
+                    </p>
+                </div>
+                <div class="content-info-inner">
+                    <label>手机号</label>
+                    <p>
+                        <input id="mobile" name="mobile" type="tel" style="width:100%" />
+                    </p>
+                </div>
+            </div>
+            <div class="content-address">
+                <label>所在地区</label>
+                <select name="province" id="province">
+                    <option value="0">省</option>
+                </select>
+                <select name="city" id="city">
+                    <option value="0">市</option>
+                </select>
+                <select name="district" id="district">
+                    <option value="0">区</option>
+                </select>
+                <div class="content-address-detail">
+                    <label>详细地址</label>
+                    <p>
+                        <input id="address" name="address" type="text" />
+                    </p>
+                </div>
+            </div>
+            <a id="btn-buy" class="btn-buy" href="javascript:void(0)">确认购买</a>
+        </form>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            var detail = {
+                init: function() {
+                    var self = this;
+                    self.bindEvent();
+                },
+
+                bindEvent: function() {
+                    var self = this;
+                    $("select").on("change", function() {
+                        var $select = $(this);
+                        var $option = $select.children();
+                        if ($option.eq(0).attr("selected")) {
+                            $select.css({
+                                "color": "#999999"
+                            });
+                        } else {
+                            $select.css({
+                                "color": "#333333"
+                            });
+                        }
+                    });
+                    $(".btn-buy").on("click", function() {
+                        if (self.checkList()) {
+							var date = new Date();
+							var datestr = rules(date.getFullYear(),4)
+										+ rules((date.getMonth()+1),2)
+										+ rules(date.getDate(),2)
+										+ rules(date.getHours(),2)
+										+ rules(date.getMinutes(),2)
+										+ rules(date.getSeconds(),2);
+                            var param = {
+                                    name: $('#name').val(),
+									mobile: $('#mobile').val(),
+									goods: '手表测试',
+									advertiserid: 805,
+									ordernum: 805+'-'+datestr,
+									price: 198,
+									num: 1,
+									amount: 198,
+									address: $('#province option:selected').text() + $('#city option:selected').text() + $('#district option:selected').text() + $('#address').val(),
+									siteid: 1,
+									sms: 0
+                                };							
+							$.post('/submit.php', param, function(data){
+								var msg = '';
+								switch(data.status)
+								{
+									case 0 : msg = '提交成功'; break;
+									case 1 : msg = '已经提交过了'; break;
+									default : msg = '提交失败，请稍后重试'; break;
+								}
+								alert(msg);
+							}, 'json')
+                        }
+                    });
+                },
+
+                checkList: function() {
+                    var name = $("#name").val();
+                    var mobile = $("#mobile").val();
+                    var province = $("#province").val();
+                    var city = $("#city").val();
+                    var district = $("#district").val();
+                    var address = $("#address").val();
+
+                    var province_str = $("#province").find("option:selected").text();
+                    var city_str = $("#city").find("option:selected").text();
+                    if (district != '0') {
+                        var district_str = $("#district").find("option:selected").text();
+                    }
+                    $("#province_str").val(province_str);
+                    $("#city_str").val(city_str);
+                    $("#district_str").val(district_str);
+
+                    if (name == '') {
+                        alert('请正确填写收货人姓名');
+                        return false;
+                    }
+                    if (mobile == '') {
+                        alert('请正确填写联系手机');
+                        return false;
+                    }
+                    var re = /^1[3|4|5|8|7][0-9]\d{8}$/;
+                    if (mobile.length != 11 || !re.test(mobile)) {
+                        alert('请填写有效的手机号码');
+                        return false;
+                    }
+                    if (province == '0' || city == '0' || district == '0') {
+                        alert('请正确填写收货城市');
+                        return false;
+                    }
+                    if (address == '') {
+                        alert('请正确填写收货地址');
+                        return false;
+                    }
+                    return true;
+                }
+            }
+            detail.init();
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,textarea,select,optgroup,option,fieldset,figure,legend,p,blockquote,th,td{margin:0;padding:0;color:#404040;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-touch-callout:none}
+html,body{overflow-x: hidden;}
+ul,li{list-style:none}
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}
+q:before,q:after{content:''}
+a {text-decoration:none;color:#4a4a4a;}
+a img,img{-ms-interpolation-mode:bicubic}
+img {vertical-align:middle}
+fieldset,img{border:0}
+em,i {font-style:normal;}
+address,caption,cite,code,dfn,em,th,var,optgroup{font-style:normal;font-weight:400}
+table{font-size:inherit;font:100%}
+caption,th{text-align:left}
+abbr,acronym{border:0;font-variant:normal}
+/*body*/
+.pagebox {padding:0; margin:0;background:#ededed;width:100%;}
+.p_title{ display:block; width:100%; border-left:35px #108ff6 solid; height:50px; line-height:50px; padding-left:15px; font-size:30px; font-family: "Microsoft YaHei"; font-weight:600; color:#000; clear:both; margin:25px 0;}
+/*视频*/
+#banner {position:relative;}
+#banner .vedio { position:absolute; bottom:0; right:4%; width:35%;}
+#vedioplay { position:absolute;bottom:0;left:5%}
+/*轮播图*/
+
+.carousel-control.left {background:none;}
+.carousel-control.right {background:none;}
+
+/*.carousel-control.left{background-image:-webkit-linear-gradient(left,color-stop(rgba(0,0,0,0.5) 0),color-stop(rgba(0,0,0,0.0001) 100%));background-image:linear-gradient(to right,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.0001) 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000',endColorstr='#00000000',GradientType=1)}
+
+.carousel-control.right{right:0;left:auto;background-image:-webkit-linear-gradient(left,color-stop(rgba(0,0,0,0.0001) 0),color-stop(rgba(0,0,0,0.5) 100%));background-image:linear-gradient(to right,rgba(0,0,0,0.0001) 0,rgba(0,0,0,0.5) 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#80000000',GradientType=1)}*/
+	
+
+/*提交表单*/
+.fl-20{margin-left:-20px;}
+.control-label{ text-align:right;}
+.control-label span{ color:#ff0000;}
+.form-group input[type="submit"] { width:90%; display:block; background:#08c; border:0; margin:0 auto; border-radius:0; height:40px; line-height:30px;}

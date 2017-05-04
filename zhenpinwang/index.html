@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>珍品网</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <div class="zt-wrapper">   
+        <div><img src="images/zp1_01.jpg" width="100%"/></div>
+        <div><img src="images/zp1_02.jpg" width="100%"/></div>
+        <div><a href="https://itunes.apple.com/cn/app/zhen-pin-wang-she-chi-pin/id904826337?l=en&mt=8" target="_blank"><img src="images/zp1_03.jpg" width="100%"/></a></div>
+        <div><img src="images/zp1_04.jpg" width="100%"/></div>
+        <div><img src="images/zp1_05.jpg" width="100%"/></div>
+        <div><img src="images/zp1_06.jpg" width="100%"/></div>
+        <div><img src="images/zp1_07.jpg" width="100%"/></div>
+        <div><img src="images/zp1_08.jpg" width="100%"/></div>
+        <div><img src="images/zp1_09.jpg" width="100%"/></div>
+        <div><a href="https://itunes.apple.com/cn/app/zhen-pin-wang-she-chi-pin/id904826337?l=en&mt=8" target="_blank"><img src="images/zp1_03.jpg" width="100%"/></a></div>
+        <div><img src="images/zp1_11.jpg" width="100%"/></div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+	function browserRedirect() {
+		var sUserAgent = navigator.userAgent.toLowerCase();
+		var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+		var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+		var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+		var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+		var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+		var bIsAndroid = sUserAgent.match(/android/i) == "android";
+		var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+		var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+		//document.writeln("您的浏览设备为：");
+		if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+			document.writeln("phone");
+		} else {
+			document.writeln("pc");
+		}
+	}
+
+	browserRedirect();
+</script>

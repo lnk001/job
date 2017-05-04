@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding:0;
+}
+
+html,body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-family: "Microsoft YaHei",SimSun,"Arial Narrow",HELVETICA,sans-serif;
+	background:#fff;
+	color:#000;	
+}
+body {
+	Font-size:62.5%;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	cursor:pointer;
+	color:#fff;
+}
+a:hover {
+	color:#fff;
+}
+
+img {
+	border: 0;
+}
+
+em{ color:#ff0000;}
+
+/*订单*/
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+	-webkit-appearance: none;
+}
+
+textarea {  -webkit-appearance: none;}   
+
+
+.button{ border-radius: 0; } 
+
+
+input,select,textarea {
+	font: 100% Microsoft YaHei,SimSun,Arial,Verdana;
+}
+
+#order {
+	width: 100%;
+}
+
+.table-title{display:block; padding:4% 0; background:#ff5600; text-align:center;font-size:2.5em; font-weight:bold; color:#fff; margin-bottom:20px;}
+
+.warp {
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.warp .bdbox {
+	float: left;
+	margin-bottom: 1em;
+	width: 100%;
+	font-size:1.4em;
+}
+
+
+.warp label.bdxx {
+	float: left;
+	display: inline;
+	overflow: hidden;
+	padding-right: 3%;
+	width: 20%;
+	line-height:1.8em;
+	text-align: right;
+}
+
+.dxbox,.xlbox,.textbox,.text2box,.text3box {
+	float: left;
+	display: inline;
+	overflow: hidden;
+	width: 75%;
+}
+
+.textbox input {
+	padding: 3px 5px;
+	width: 90%;
+	color: #333;
+}
+
+.dxbox,.text2box,.text3box {
+	line-height: 1.2em;
+}
+
+.xlbox select{
+	width:30.7%;
+	
+}
+
+.dxbox{
+	margin-top:-0.2em;	
+}
+
+.dxbox input {
+	margin-top:0.5em;
+	margin-left:0.1em;
+}
+
+.dxbox label img {
+	vertical-align:bottom
+}
+
+.text2box textarea {
+	padding: 4px 5px;
+	width: 90%;
+	height: 40px;
+	background: #FFF;
+}
+
+.text3box input {
+	margin-right: 8px;
+	padding: 4px 5px 3px;
+	width: 40px;
+	background: #FFF;
+	color: #666;
+	vertical-align: middle;
+	text-align: center;
+	font: 16px Arial;
+	font-weight: bold;
+}
+
+.subbox {
+	float: left;
+	padding-bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.subbox input {
+	width: 90%;
+	padding:2% 0;
+	font-size: 2.5em;
+	cursor: pointer;
+	display: block;
+	background: #ff5600;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	border:none;
+	margin:0 auto;
+	
+}
+
+
+

@@ -1,0 +1,204 @@
+* {
+	margin:0;
+	padding:0;
+	-webkit-appearance: none;
+	box-sizing: border-box;
+}
+body,html {
+	width:100%;
+	height:100%;
+}
+body {
+	font-family:Microsoft YaHei,SimSun,Arial Narrow,HELVETICA,sans-serif;
+	background:#fff;
+	color:#7b5d00;
+}
+h1 {
+	background-color:#b72f20;
+	color:#fff;
+	font-size:25px;
+	text-align:center;
+	padding:10px;
+}
+a {
+	text-decoration:none;
+	color:#333;
+}
+img {
+	border:0;
+	display:block;
+	width:100%;
+}
+.contant {
+	width:100%;
+	height:100%;
+}
+
+.pc_contant,.table_bg {
+	margin:0 auto;
+	width:1200px;
+	background:#ffde03;
+}
+.reg-text {
+	display:block;
+	height:35px;
+	line-height:35px;
+	color:#000;
+	text-align:center;
+	width:100%;
+	font-size:16px;
+}
+.reg-tip {
+	width:56%;
+	height:220px;
+	position:relative;
+	display:block;
+	border:1px solid #FFF;
+	border-radius:6px;
+	left:22%;
+}
+.reg-tip .bg {
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:0;
+	background:#fff;
+	opacity:.3;
+}
+.reg-tip p {
+	text-align:center;
+	height:38px;
+	line-height:38px;
+	font-size:14px;
+}
+.reg-warpper {
+	width:70%;
+	text-align:center;
+	padding-top:5px;
+	position:absolute;
+	left:15%;
+	z-index:999;
+	
+}
+.reg-content .form-group {
+	width:100%;
+	text-align:left;
+	height:35px;
+	line-height:22px;
+	font-size:1.2em;
+	border-radius:2px;
+	margin-bottom:12px;
+}
+.reg-content .form-group label {
+	font-size:1.2em;
+	padding:5px;
+	width:30%;
+	text-align:right;
+	display:inline-block;
+}
+.reg-content .form-group label span {
+	color:red;
+}
+.reg-warpper .form-group input[type=text],.reg-warpper .form-group select {
+	padding:5px;
+	color:#9d9ea0;
+	width:50%;
+	font-size:1.1em;
+	box-sizing:border-box;
+	border:1px solid #e5cd22;
+	border-radius:6px;
+}
+.reg-warpper .form-group select {
+	background:url(../img/arrow.png) no-repeat scroll 100% transparent;
+}
+#btn-buy {
+	width:300px;
+	height:40px;
+	line-height:40px;
+	margin-top:10px;
+	border:0;
+	font-size:18px;
+	background:#b768ff;
+	display:inline-block;
+	color:#fff;
+	cursor:pointer;
+	font-weight:800;
+	text-decoration:none;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-box-shadow:0 2px 6px rgba(0,0,0,0.7);
+	-webkit-box-shadow:0 2px 6px rgba(0,0,0,0.7);
+	border-bottom:1px solid rgba(0,0,0,0.25);
+}
+.btn-item {
+	height:50px;
+	bottom:0;
+	position:fixed;
+	width:100%;
+	display:block;
+	background:#000;
+	opacity:0.7;
+	z-index:999;
+}
+.btn-item .totop {
+	background:url(../img/btn-totop.png) center center no-repeat;
+	background-size:30px;
+	width:18%;
+	float:right;
+	height:50px;
+	box-sizing:border-box;
+	display:block;
+}
+.btn-item .buy_show {
+	box-sizing:border-box;
+	height:50px;
+	width:100%;
+	line-height:50px;
+	float:left;
+	display:block;
+	text-align:center;
+	font-size:22px;
+	color:#FFF;
+	font-weight:normal;
+	letter-spacing:5px;
+}
+.copyright {
+	height:80px;
+	line-height:80px;
+	text-align:center;
+	font-size:14px;
+	width:280px;
+	display:block;
+	margin:0 auto;
+	background:url(../img/addr.png) no-repeat 0 50%;
+}
+
+@media screen and (max-width:1024px) {
+	body {
+		font-size:68%;
+		background:#ffde03;
+	}
+	.table_bg {
+		width:100%;
+	}
+	.reg-tip {
+		width:90%;
+		left:5%;
+	}
+	.reg-warpper {
+		width:90%;
+		left:5%;
+	}
+	.reg-content .form-group label {
+		width:35%;
+	}
+	.reg-warpper .form-group input[type=text],.reg-warpper .form-group select {
+		width:55%;
+	}
+	#btn-buy {
+		width:200px;
+	}
+}
+/* 设置了浏览器宽度不大于1024px时 */ 

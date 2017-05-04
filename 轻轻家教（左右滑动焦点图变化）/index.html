@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no">
+    <title>轻轻家教</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style-promo.css"/>
+</head>
+
+<body>
+<div class="contant" id="top">
+	<div><img src="img/z1.jpg" width="100%"></div>
+    <div><img src="img/z2.jpg" width="100%"></div>
+    <div><a href="javascript:myscroll('reg-tip');"><img src="img/z3.jpg" width="100%"></a></div>
+    <div><a href="javascript:myscroll('reg-tip');"><img src="img/z4.jpg" width="100%"></a></div>
+    <div><img src="img/z5.jpg" width="100%"></div>
+    <div class="page">
+        <div class="swiper-container swiper-container-horizontal swiper-container-3d swiper-container-coverflow">
+            <div class="swiper-wrapper" style="transform: translate3d(-1125px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="transform: translate3d(390px, 0px, -240px) rotateX(0deg) rotateY(-60deg); z-index: -2; transition-duration: 0ms;">
+                <div class="box b-1"></div>
+            </div>
+            <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" style="transform: translate3d(260px, 0px, -160px) rotateX(0deg) rotateY(-40deg); z-index: -1; transition-duration: 0ms;">
+                <div class="box b-2"></div>
+            </div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="2" style="transform: translate3d(130px, 0px, -80px) rotateX(0deg) rotateY(-20deg); z-index: 0; transition-duration: 0ms;">
+                <div class="box b-3"></div>
+            </div>
+            <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg); z-index: 1; transition-duration: 0ms;">
+                <div class="box b-1"></div>
+            </div>
+            <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="transform: translate3d(-130px, 0px, -80px) rotateX(0deg) rotateY(20deg); z-index: 0; transition-duration: 0ms;">
+                <div class="box b-2"></div>
+            </div>
+            <div class="swiper-slide" data-swiper-slide-index="2" style="transform: translate3d(-260px, 0px, -160px) rotateX(0deg) rotateY(40deg); z-index: -1; transition-duration: 0ms;">
+                <div class="box b-3"></div>
+            </div>
+        </div>   
+    </div>
+    <div><img src="img/z7.jpg" width="100%"></div>
+    <div class="reg-text">注册查看更多学生反馈</div>
+    <div class="reg-tip" id="reg-tip">
+        <div class="reg-warpper">
+            <form method="post" id="myform" name="myform" action="">
+                <div class="reg-content form-horizontal clearfix" id="m_reg" novalidate="novalidate">
+                	<div class="form-group">
+                        <label for="mobile">手机号码<span>*</span></label>
+                        <input type="text" class="form-control" id="mobile" name="mobile" check-type="mobile required" placeholder="请输入手机号">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">所在城市<span>*</span></label>
+                        <select name="city" id="city">
+                            <option value="" selected="selected">选择所在城市</option>
+                            <option value="北京" >北京</option>
+                            <option value="上海" >上海</option>
+                            <option value="深圳" >深圳</option>
+                            <option value="杭州" >杭州</option>
+                            <option value="南京" >南京</option>
+                            <option value="武汉" >武汉</option>
+                            <option value="南昌" >南昌</option>
+                            <option value="合肥" >合肥</option>
+                            <option value="宁波" >宁波</option>
+                            <option value="长沙" >长沙</option>
+                            <option value="苏州" >苏州</option>
+                        </select> 
+                    </div>
+                    <div class="form-group">
+                        <label for="nianji">所在年级</label>
+                        <select name="nianji" id="nianji">
+                            <option value="" selected="selected">选择所在年级</option>
+                            <option value="一年级" >一年级</option>
+                            <option value="二年级" >二年级</option>
+                            <option value="三年级" >三年级</option>
+                            <option value="四年级" >四年级</option>
+                            <option value="五年级" >五年级</option>
+                            <option value="六年级" >六年级 </option>
+                            <option value="七年级" >七年级</option>
+                            <option value="八年级" >八年级</option>
+                            <option value="九年级" >九年级</option>
+                            <option value="高一" >高一</option>
+                            <option value="高二" >高二</option>
+                            <option value="高三" >高三</option>
+                        </select> 
+                    </div>
+                    <div class="form-group">
+                        <label for="kemu">所需科目</label>
+                        <select name="kemu" id="kemu">
+                            <option value="" selected="selected">选择所需科目</option>
+                            <option value="语文" >语文</option>
+                            <option value="数学" >数学</option>
+                            <option value="英语" >英语</option>
+                            <option value="物理" >物理</option>
+                            <option value="化学" >化学</option>
+                            <option value="政治" >政治</option>
+                            <option value="历史" >历史</option>
+                            <option value="生物" >生物</option>
+                            <option value="地理" >地理</option>
+                            <option value="科学" >科学</option>
+                        </select> 
+                    </div>
+                    
+                </div>
+                <div><button type="submit" class="btn-buy" id="btn-buy">立即提交</button></div>
+            </form>
+        </div>
+    </div>
+    <div><img src="img/z10.jpg" width="100%"></div>
+    <div><img src="img/z11.jpg" width="100%"></div>
+    <div><a href="javascript:myscroll('reg-tip');"><img src="img/z12.jpg" width="100%"></a></div>
+    <!--<div style=" display:block; width:100%; height:50px;"></div>
+    
+    <div class="btn-item">
+		<a href="javascript:myscroll('reg-tip');" class="buy_show">立即预约</a>
+	</div>-->
+</div>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.hovertreescroll.js"></script>
+<script src="js/swiper.3.3.1.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: -20,
+            stretch: 130,
+            depth: 80,
+            modifier: 1,
+            slideShadows : false
+        },
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+    });
+</script>
+<script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>

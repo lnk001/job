@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="copyright" content="Copyright (c) 2016 optaim.">
+<meta name="description" content="高德地图">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="css/swiper.min.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<title>高德地图</title>
+</head>
+<body>
+<div class="pagebox mt20">
+    <section>
+       <img src="images/0407_03.jpg" width="100%">
+    </section>
+    <section>
+       <img src="images/0407_05.jpg" width="100%">
+    </section>
+    <section class="mt20">
+       <a class="purebox"><img src="images/0407_08.jpg" width="100%"></a>
+    </section>
+    <section class="mt20">
+       <img src="images/0407_10.jpg" width="100%" alt="小编推荐">
+    </section>
+    <div class="font_text pl15">
+    	中国专业的手机地图，超过5亿用户正在使用!高德地图拥有全面精准的地点信息，特色语音导航、智能路线规划;省流量、耗电低、空间占用小、体验流畅，是您贴心的生活助手！
+    </div>
+    <section class="mt20">
+       <img src="images/0407_12.jpg" width="100%" alt="应用截图">
+    </section>
+    <section class="_swiper">
+        
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/1.jpg" height="100%" width="50%"><img src="images/1.jpg" height="100%" width="50%"></div>
+                <div class="swiper-slide"><img src="images/2.jpg" height="100%" width="50%"><img src="images/2.jpg" height="100%" width="50%"></div>
+             
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+            
+        
+    </section>
+    <section class="mt20">
+       <img src="images/0407_14.jpg" width="100%" alt="更新内容">
+    </section>
+    <div class="font_text pl15">
+        【亮点】<br>
+        1.实时路况，一手掌握，首家提供全国路况<br>
+        2.实时公交，等车无忧，支持全国14个城市<br>
+        3.摇一摇唤醒语音助手，使用更方便<br>
+        【优化】<br>
+        1.优化搜索历史记录，查找更便捷<br>
+        2.实现夜间三维导航模式，指引更清晰<br>
+        3.导航中增加智能语音控制<br>
+    </div>
+    <section class="mt20">
+       <a class="purebox"><img src="images/0407_08.jpg" width="100%"></a>
+    </section>
+    
+    <div class="dialog">
+    	<p class="font_bold">http://mapdownload.autonavi.com/mobileapk/otherApk/7.6.6.2059/Amap_V7.6.6.2059_C02110001707.apk</p>
+        <p class="font_c_999">确认要下载此链接吗？</p>
+        <p class="c_btn"><a class="cancel">取消</a><a href="http://mapdownload.autonavi.com/mobileapk/otherApk/7.6.6.2059/Amap_V7.6.6.2059_C02110001707.apk" class="pl15" id="JdownApp">确定</a></p>
+    </div>
+
+</div>  
+
+<!--手机端下载引导-->
+<div class="wxtip" id="JweixinTip" >
+    <span class="wxtip-icon"></span>
+    <p class="wxtip-txt">点击右上角<br>选择在浏览器中打开</p>
+</div>  
+
+
+</body>
+</html>
+<!-- Swiper JS -->
+
+<script src="js/jquery-2.0.0.min.js"></script>
+<script src="js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        autoHeight: true, //enable auto height
+    });
+</script>
+<script>
+$(function(){
+	
+	$(".purebox").click(function(){
+		$(".dialog").fadeIn();
+		return false;
+		})
+	$(".cancel").click(function(){
+		$(".dialog").fadeOut();
+		return false;
+		})
+		
+	$("#JdownApp").click(function(e){
+		$(".dialog").fadeOut();
+		
+		var sUserAgent = navigator.userAgent.toLowerCase();
+		var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+		var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+		var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+		var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+		var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+		var bIsAndroid = sUserAgent.match(/android/i) == "android";
+		var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+		var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+		
+		if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM ){
+			alert(e);
+			window.event? window.event.returnValue = false : e.preventDefault();
+			document.getElementById('JweixinTip').style.display='block';
+		}else{
+			window.location.href="http://mapdownload.autonavi.com/mobileapk/otherApk/7.6.6.2059/Amap_V7.6.6.2059_C02110001707.apk";
+			}
+		})	
+	
+	$("#JweixinTip").click(function(){
+		this.style.display='none';
+		return false;
+		})			
+	
+})
+
+
+</script>
+
+              

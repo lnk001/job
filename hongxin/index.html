@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>限时秒杀</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<link rel="stylesheet" type="text/css" href="css/instantSale.css" />
+<link rel="stylesheet" type="text/css" href="css/phone-reset.css" />
+<link rel="stylesheet" type="text/css" href="css/buy.css" />
+</head>
+<body>
+	<script type="text/javascript">
+		var u = navigator.userAgent;
+		if ((u.indexOf("iPhone") > -1 || u.indexOf("iPad") > -1) && window.devicePixelRatio >= 2) {
+			document.body.setAttribute("class", "ios");
+		}
+	</script>
+	<div id="container">
+	<div class="page-item banner-item" id="top">
+		 <img class="lazy-img" data-src="images/source/hx_01.jpg" />
+	</div>
+	<div class="price-item">
+		<div class="price-tab">
+			<em id="new_price">¥0</em>
+			<span>
+				<label>原价</label>
+				<label id="old_price">¥0</label>
+			</span>
+			<span>
+				<label>折扣</label>
+				<label id="discount">1</label>
+			</span>
+			<span>
+				<label>节省</label>
+				<label id="dec_price">¥0</label>
+			</span>
+		</div>
+		<div class="amount-tab">
+			<span class="timmer">
+				<em id="day" >00</em>天
+				<em id="hour">00</em>小时
+				<em id="min">00</em>分钟
+				<em id="sec">00</em>秒
+			</span>
+			<span class="amount">
+				已有<em id="buy_count">882</em>人购买
+			</span>
+		</div>
+		<div class="btn-tab">
+			<a href="javascript:myscroll('order')">立即购买</a>
+		</div>
+	</div>
+	<div class="page-item detail-item">
+		<h2>产品介绍</h2>
+		<p class="detail-content"><b>活动说明</b><br/>[JEDIR 官方首发秒杀活动 限时秒杀]专柜正品JEDIR时尚钢带表，线下零售价2980元，活动期间仅需货到付款298元，每天限量发售100只，原装正品，7天无理由退换，30天只换不修。时间不等人，赶快抢吧！
+</p>
+		<p class="detail-pic">
+			<img class="lazy-img" data-src="images/source/hx_02.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_03.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_04.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_05.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_06.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_07.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_08.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_09.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_10.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_11.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_12.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_13.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_14.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_15.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_16.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_17.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_18.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_19.jpg" />
+            <img class="lazy-img" data-src="images/source/hx_20.jpg" />
+		</p>
+	</div>
+
+    <p class="comment-title">最新评论</p>
+	<div class="comment">
+		<div class="comment-inner">
+				<div class="comment-name">159****2381 蔡先生发表评论 </div>
+				<div class="comment-content">这个价格抢到真是赚了！这款机械表的质感特别好，带着很上档次。</div>
+				<div class="comment-name">130****2553 陆先生发表评论 </div>
+				<div class="comment-content">宝贝收到，还送了礼品，非常好的卖家！同事都说这表肯定要几千块，这个价格性价比太高啦！</div>
+				<div class="comment-name">135****0933 田先生发表评论</div>
+				<div class="comment-content">宝贝和商品描述一致，戴着很有范儿。发货速度也很快，快递小哥很nice。</div>
+				<div class="comment-name">189****1820 陈先生发表评论</div>
+				<div class="comment-content">手表质量很不错，做工非常细致，表盘很轻薄，50米防水，特别适合夏天带，全钢制的表带也很舒服。物流配送也给力，必须好评！！</div>
+				<div class="comment-name">139****7525 丁女士发表评论 </div>
+				<div class="comment-content">买来送给男票的生日礼物，他非常喜欢，带着逼格瞬间提升~</div>
+				<div class="comment-name">138****8622 刘先生发表评论</div>
+				<div class="comment-content">给卖家的服务态度点赞，下单后咨询了很多问题，都耐心解答了。手表款式很喜欢，还送了礼品，很愉快的一次购物！</div>
+				<div class="comment-name">189****9477 文先生发表评论</div>
+				<div class="comment-content">送给老爸的，这个价格很实惠，老爸说质量不错，还防水。</div>
+				<div class="comment-name">134****7300 贝先生发表评论 </div>
+				<div class="comment-content">这款表比国内的那些品牌好太多，做工精致没有瑕疵，一看就是正品，很满意！</div>
+				<div class="comment-name">137****5782 梁先生发表评论</div>
+				<div class="comment-content">买了两块，帮朋友带了一块，他也很喜欢，折扣给力，手表高大上！</div>
+				<div class="comment-name">180****9903 黎先生发表评论</div>
+				<div class="comment-content">戴了几天了，时间很准，材质也很好，还有防水和夜光的功能，性价比很高的产品，推荐。</div>
+			</div>
+	</div>
+
+    <!--商品订单-->
+    <div class="wrapper" id="order" >
+        <p class="header">订单信息</p>
+        <form action="/index.php?controller=detail&action=submit&check=aaff27d10b6b1d5bc9cdcc5cb243ebd1&token=dbce3ecba1dc924xp91fege3e4b4bfap" method="post">
+            <div class="content-info">
+                <div class="content-info-inner">
+                    <label>姓名：</label>
+                    <p>
+                        <input id="name" name="name" type="text" />
+                    </p>
+                </div>
+                <div class="content-info-inner">
+                    <label>手机：</label>
+                    <p>
+                        <input id="mobile" name="mobile" type="tel" style="width:100%" />
+                    </p>
+                </div>
+            </div>
+
+     		<!--商品数量-->
+            <div class="content-product clearfix">
+                <label>数量：</label>
+                <div class="textbox">
+                    <input class="min" name="" type="button" value="-" />
+                    <input class="text_box" name="goodnum" id="goodnum" type="number" value="1" min="1" max="99" oninput="if(value.length>2) value=value.slice(0,2)" />
+                    <input class="add" name="" type="button" value="+" />
+                </div>
+            </div>
+            <div class="content-pay">
+                <label>付款：</label>
+                <p>
+                    <img src="images/hdfk.gif">
+                </p>
+            </div>
+
+            <div class="content-address">
+                <label>送至：</label>
+                <select name="province" id="province">
+                    <option disabled="true">请选择</option>
+                </select>
+                <select name="city" id="city">
+                    <option disabled="true">请选择</option>
+                </select>
+                <select name="district" id="district">
+                    <option disabled="true">请选择</option>
+                </select>
+                <div class="content-address-detail">
+                    <label>地址：</label>
+                    <p>
+                        <input id="address" name="address" type="text" />
+                    </p>
+                </div>
+            </div>
+
+
+            <a id="btn-buy" class="btn-buy" href="javascript:void(0)">确认购买</a>
+        </form>
+    </div>
+
+	<div class="info"><img class="lazy-img" data-src="images/xinren.jpg" /></div>
+
+	<div class="btn-item">
+    	<a href="javascript:myscroll('top');" class="totop"></a>
+		<a href="javascript:myscroll('order');" class="buy_show">立即购买</a>
+	</div>
+	</div>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.hovertreescroll.js"></script>
+	<script type="text/javascript" src="js/instantSale.js"></script>
+    <script type="text/javascript" src="js/region.js"></script>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259294847'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1259294847%26show%3Dpic2' type='text/javascript'%3E%3C/script%3E"));</script>
+
+    <script type="text/javascript">
+        $(function() {
+            var detail = {
+                init: function() {
+                    var self = this;
+                    self.bindEvent();
+					loadData(province,city,district);
+                },
+
+				rules:function(str,length){
+					var MANY_ZEROS = '0000000000';
+					if (typeof(str) != "string")
+						str = String(str);
+					return (MANY_ZEROS.substring(0,length-str.length))+str;
+				},
+
+                bindEvent: function() {
+                    var self = this;
+                    $("select").on("change", function() {
+                        var $select = $(this);
+                        var $option = $select.children();
+                        if ($option.eq(0).attr("selected")) {
+                            $select.css({
+                                "color": "#999999"
+                            });
+                        } else {
+                            $select.css({
+                                "color": "#333333"
+                            });
+                        }
+                    });
+                    $(".btn-buy").on("click", function() {
+                        if (self.checkList()) {
+							// var date = new Date();
+							// var datestr = self.rules(date.getFullYear(),4)
+							// 			+ self.rules((date.getMonth()+1),2)
+							// 			+ self.rules(date.getDate(),2)
+							// 			+ self.rules(date.getHours(),2)
+							// 			+ self.rules(date.getMinutes(),2)
+							// 			+ self.rules(date.getSeconds(),2);
+							// var url = window.location.search;
+							// if(url.indexOf('?')>-1) var siteid = url.substr(1).match(/(^|&)_id=(\d+)/)[2];
+							// else var siteid = 1;
+                            // var param = {
+                            //         name: $('#name').val(),
+							// 		mobile: $('#mobile').val(),
+							// 		goods: 'JEDIR手表',
+							// 		advertiserid: 10002,
+							// 		ordernum: 10002+'-'+datestr+String(Math.random()).slice(2,6),
+							// 		price: 298,
+							// 		goodsid: 2,
+							// 		num: $("#goodnum").val(),
+							// 		amount: 298*parseInt($('#goodnum').val()),
+							// 		address: $('#province option:selected').text() + $('#city option:selected').text() + $('#district option:selected').text() + $('#address').val(),
+							// 		siteid: siteid,
+							// 		sms: 1
+                            //     };
+							// $.post('/orderSubmit.php', param, function(data){
+							// 	var msg = '';
+							// 	switch(data.status)
+							// 	{
+							// 		case 0 : msg = '订单提交成功！'; break;
+							// 		case 1 : msg = '您已经提交过订单了哦~'; break;
+							// 		default : msg = '提交失败，请稍后重试'; break;
+							// 	}
+							// 	alert(msg);
+							// }, 'json');
+
+							var f = getURLParm('f');
+                            var v = 1;
+                            $.ajax({
+                                type: "post",
+                                url: "/order/submit",
+                                data: {
+                                    name: $("#name").val(),
+                                    mobile: $("#mobile").val(),
+                                    province: $("#province").val(),
+                                    city: $("#city").val(),
+                                    district: $("#district").val(),
+                                    address: $("#address").val(),
+                                    f: f,
+                                    v: v
+                                },
+                                dataType: "json",
+                                success: function(data) {
+                                    if (data.code == 0) {
+                                        window.location.href = "finish.html";
+                                    } else {
+                                        alert(data.message);
+                                    }
+                                }
+                            });
+                        }
+                    });
+                },
+
+                checkList: function() {
+
+                    var name = $("#name").val();
+                    var mobile = $("#mobile").val();
+					var goodnum = $("#goodnum").val();
+                    var province = $("#province").val();
+                    var city = $("#city").val();
+                    var district = $("#district").val();
+                    var address = $("#address").val();
+
+                    var province_str = $("#province").find("option:selected").text();
+                    var city_str = $("#city").find("option:selected").text();
+                    if (district != '0') {
+                        var district_str = $("#district").find("option:selected").text();
+                    }
+                    $("#province_str").val(province_str);
+                    $("#city_str").val(city_str);
+                    $("#district_str").val(district_str);
+
+                    if (name == '') {
+                        alert('请正确填写收货人姓名');
+                        return false;
+                    }
+                    if (mobile == '') {
+                        alert('请正确填写联系手机');
+                        return false;
+                    }
+                    var re = /^1[3|4|5|8|7][0-9]\d{8}$/;
+                    if (mobile.length != 11 || !re.test(mobile)) {
+                        alert('请填写有效的手机号码');
+                        return false;
+                    }
+
+					if (goodnum == '' || goodnum == '0' || goodnum == 'NaN') {
+						alert('请正确填写商品数量');
+						return false;
+					}
+                    if (province == '0' || city == '0' || district == '0') {
+                        alert('请正确填写收货城市');
+                        return false;
+                    }
+                    if (address == '') {
+                        alert('请正确填写收货地址');
+                        return false;
+                    }
+                    return true;
+                }
+            }
+            detail.init();
+			var getURLParm = function (name) {
+	            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	            var r = window.location.search.substr(1).match(reg);
+	            if ( r != null) {
+	                return  unescape(r[2]);
+	            }
+	            return null;
+	        };
+        })
+    </script>
+	<script type="text/javascript">
+	   var gdt_tracker = gdt_tracker || [];
+	   gdt_tracker.push(["set_source_id", "29695"]);
+	   (function() {
+	       var doc=document, h=doc.getElementsByTagName("head")[0], s=doc.createElement("script");
+	       s.async=true; s.src="http://qzs.qq.com/qzone/biz/res/gt.js";
+	       h && h.insertBefore(s,h.firstChild)
+	   })();
+	</script>
+</body>
+</html>

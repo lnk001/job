@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="copyright" content="Copyright (c) 2016 optaim.">
+<meta name="description" content="创意时尚LED护眼台灯">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/success.css">
+</head>
+<body>
+<div style="height:100%; width:100%;">
+    <div class="cg_top">闪电购官方商城—您已成功下单</div>
+    <div class="dabao">
+        <div class="lctext">
+            <p class="lcp">你的商品已打包，准备出库</p>
+            <p>等待出库，快递小哥将火速赶到</p>
+        
+        </div>
+    </div>
+    <p><img src="images/sideng.jpg" ></p>
+    <div class="fktext">
+        <p>商品名称:  创意时尚插电卧室床头灯</p>
+        <p>颜色：<input type="radio" value="太空银" checked="checked">太空银</p>
+        <p>付款方式：<b style="color:#00a2e6">货到付款</b></p>
+    </div>
+    <div class="qxdd">取消订单</div>
+    
+    <div class="tiao"></div>
+    <div class="wenti">
+        <div class="w_title">常见问题</div>
+        <ul class="nav">
+            <li>
+                <div>付款方式及如何发货？ </div>
+                <ul>
+                	<li>小主，您订购的商品是支持货到付款，商品为包邮产品，我们会根据您提供的地址为您选择最快送达的快递公司为您送货</li>
+                </ul>
+            </li>
+            <li>
+                <div>订单生成后需要多长时间到达？ </div>
+                <ul>
+                	<li>小主，订单提交成功后，页面会提示预计送到时间，请您以页面提示的预计送达时间为准。订单发货后，会以短信方式提示包裹单号及快递公司</li>
+                </ul>
+            </li>
+            <li>
+                <div>可以修改收货人信息吗？ </div>
+                <ul>
+                	<li>小主，订单成功后，未发货时可以进行订单信息更改。可直接与客服美女联系，进行修改哦！</li>
+                </ul>
+            </li>
+            <li>
+                <div>如果收到商品不满意怎么办？是否可办理退换？ </div>
+                <ul>
+                	<li>小主，我们支持七天无理由退换，三十天保修的服务宗旨。自签收所购买商品后七日内，在不影响该商品二次销售的情况下，我们将为您提供退换货
+的服务。具体退换货方法可与客服美女联联系！</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+
+  var changeType=$('.nav').find('div');
+  $.each(changeType,function(){
+    $(this).on('click',function(){
+      if(false==$(this).next().is(':visible')){
+        $('.nav ul').slideUp(5);
+      }
+      $(this).next().slideToggle(5);
+      })
+      //$('.nav ul:eq(0)').show();
+      
+  })
+
+    
+})
+</script>
+</body>
+</html>

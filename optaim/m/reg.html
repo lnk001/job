@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="keywords" content="展示广告,移动广告,视频广告,移动DSP,视频DSP,动态广告,动态创意优化,再营销,重定向,实时竞价,需求方平台,dynamic creative,dynamic creative optimization,dco,remarketing,retargeting,real time bidding,rtb,dsp,dsp in china,china dsp">
+<meta name="description" content="通过展示广告、移动应用、视频广告，我们帮助更多品牌获取更多用户；从精准定向、个性化广告到跨屏投放，只为更理想的广告回报。">
+<title>智云众</title>
+<link rel="stylesheet" href="css/base.css" type="text/css">
+</head>
+<body>
+<div class="touming pos_fixed"></div>
+<div class="xiahuaxian pos_fixed"></div>
+<ul class="menu_right">
+	<span></span>
+	<li><a href="index.html">首页</a></li>
+	<li><a href="plan.html">解决方案</a></li>
+	<li><a href="dmp.html">智盒DMP</a></li>
+    <li><a href="case.html">案例分享</a></li>
+	<li><a href="aboutus.html">关于我们</a></li>
+    <li class="active"><a href="reg.html">在线申请</a></li>    
+</ul>
+<span class="fold"></span>
+<span class="logo"></span>
+<span class="weixin">
+    <div class="code">
+        <img src="images/code.jpg" alt="扫描二维码">
+        <p>智云众公众号</p>
+        <p>欢迎扫码关注</p>
+    </div>
+</span>
+
+<div id="optaim_page">
+
+    <div class="section section1">
+    	<div class="bg"><img src="images/DMP-10.jpg"></div>
+        <p class="reg_text">请留下您的联系方式，我们的业务代表会尽快和您联系！</p>
+        <p class="t_ming"></p>
+        <div class="reg-warpper">
+            <!--<span class="t_top"></span>-->
+            <form method="post" id="msg" action="">
+                <div class="reg-content form-horizontal clearfix" id="m_reg" novalidate="novalidate">
+                    <div class="form-group">
+                            <label for="title">您的称呼：</label>
+                            <input type="text" class="form-control" id="title" name="title" check-type="required" required-message="请填写您的称呼">
+                    </div>
+                    <div class="form-group">
+                            <label for="company">您的公司：</label>
+                            <input type="text" class="form-control" id="company" name="company" check-type="required" required-message="请填写您的公司名称">
+                    </div>
+                    <div class="form-group">
+                            <label for="email">电子邮箱：</label>
+                            <input type="text" class="form-control" id="email" name="email" check-type="mail required" required-message="请填写您的电子邮箱">
+                    </div>
+                    <div class="form-group">
+                            <label for="phone">联系电话：</label>
+                            <input type="text" class="form-control" id="phone" name="tel" check-type="mobile required" required-message="请填写您的联系电话">
+                    </div>
+                    <div class="form-group"><button class="btn" id="btn">立即发送</button></div>
+                </div>
+            </form>
+        </div>
+        <div class="reg_pic">
+        	<ul>
+            	<li>
+                	<p><img src="images/online-3.png"></p>
+                    <p>在线提交</p>
+                </li>
+                <li>
+                	<p><img src="images/online-4.png"></p>
+                    <p>专业顾问</p>
+                </li>
+                <li>
+                	<p><img src="images/online-5.png"></p>
+                    <p>免费开户</p>
+                </li>
+                <li>
+                	<p><img src="images/online-6.png"></p>
+                    <p>启动推广</p>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+        	<div class="footer_text">
+            	<p>版权所有 智云众 京ICP备14026918号<br>
+            	Copyright ©2016 OptAim All rights reserved.</p>
+            </div>    
+            <span></span>
+            
+        </div> 
+    </div>
+</div>  
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap3-validation.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+$(function(){
+	$('#optaim_page').fullpage({
+		
+	});
+})
+
+</script>
+<script src="js/common.js"></script>
+<script>	
+//表单数据校验
+$('.form-horizontal').validation();
+//表单提交
+$('#msg').submit(function(){
+	if($('.form-horizontal').valid(this, 'error'))
+	{
+		$.post('/email.php', $(this).serialize(), function(json){
+			alert(json.ret_msg);
+			if(json.ret_code==0)
+			window.location.reload();
+		}, 'json');
+	}
+	return false;
+})
+</script>
+</body>
+</html>

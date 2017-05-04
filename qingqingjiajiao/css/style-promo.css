@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Microsoft YaHei, SimSun, Arial Narrow, HELVETICA, sans-serif;
+  font-size: 68%;
+}
+
+h1 {
+  background-color: #b72f20;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+}
+a { 
+	text-decoration:none;
+	color:#333;
+}
+
+img {
+  border: 0;
+  display: block;
+  width: 100%;
+}
+
+.contant {
+  width: 100%;
+  height: 100%;
+}
+
+.page{ position: relative; margin-top:10px;}
+.box{width:100%; margin: 0 auto; margin-bottom:10px;}
+.b-1,.b-2,.b-3{width: 220px;height: 390px;}
+.b-1{background: url(../img/z6-1.jpg) no-repeat 50% 50%; background-size:contain}
+.b-2{background: url(../img/z6-2.jpg) no-repeat 50% 50%; background-size:contain}
+.b-3{background: url(../img/z6-3.jpg) no-repeat 50% 50%; background-size:contain}
+
+.reg-text{ display:block; height:35px; line-height:35px; color:#000; text-align:center; width:100%; font-size:16px;}
+.reg-tip {
+  width: 100%;
+  min-height:503px;
+  position:relative;
+  display: block;
+  background: #e3e3e3 url(../img/z8.jpg) no-repeat;
+  filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+  -moz-background-size:100% 100%;  
+  background-size:100% 100%;  
+  
+}
+
+.reg-warpper {
+  width: 76%;
+  height: 234px;
+  text-align: center;
+  color: #fff;
+  padding-top: 5px;
+  position:absolute;
+  bottom:1%;
+  left:50%;
+  margin-left:-38%;
+}
+
+.reg-content .form-group {
+  width: 100%;
+  text-align: left;
+  height: 35px;
+  line-height: 22px;
+  font-size: 1.2em;
+  background: #fff;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 420px) { 
+.reg-tip {height: 660px} 
+.reg-warpper {bottom:10%;}
+.reg-content .form-group {margin-bottom: 20px;}
+} 
+/* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */ 
+
+@media screen and (max-width: 375px) { 
+.reg-tip {height: 590px;} 
+.reg-warpper {bottom:6%;}
+.reg-content .form-group {margin-bottom: 14px;}
+} 
+/* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */ 
+
+@media screen and (max-width: 320px) { 
+.b-1,.b-2,.b-3{width: 170px;height: 301px;}
+.reg-tip {height: 503px;} 
+.reg-warpper {bottom:1%;}
+.reg-content .form-group {margin-bottom: 8px;}
+} 
+/* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */ 
+
+
+.reg-content .form-group label {
+  color: #666768;
+  font-size: 1.2em;
+  padding: 5px;
+  width: 35%;
+  display: inline-block;
+}
+
+.reg-content .form-group label span {
+  color: red;
+}
+
+.reg-warpper .form-group input[type=text],
+.reg-warpper .form-group select {
+  border: 0;
+  padding: 5px;
+  color: #9d9ea0;
+  width: 60%;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+
+.reg-warpper .form-group select {
+  background: url(../img/arrow.png) no-repeat scroll 100% transparent;
+}
+
+#btn-buy {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin-top:10px;
+  border: 0;
+  font-size: 16px;
+  background: #ffa300;
+  display: inline-block;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.btn-item {
+	height: 50px;
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+	display:block;
+	background:#000;
+	opacity:0.7;
+	z-index:999;
+}
+
+.btn-item .totop {
+	background: url(../img/btn-totop.png) center center no-repeat;
+	background-size:30px;
+	width: 18%;
+	float:right;
+	height: 50px;
+	box-sizing:border-box;
+	display: block;
+}
+.btn-item .buy_show {
+	box-sizing:border-box;
+	height: 50px;
+	width:100%;
+	line-height: 50px;
+	float:left;
+	display:block;
+	text-align: center;
+	font-size: 22px;
+	color: #FFF;
+	font-weight: normal;
+	letter-spacing:5px;
+}

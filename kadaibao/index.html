@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<title>卡袋宝</title>
+<link type="text/css" rel="stylesheet" href="css/0531.css">
+<link type="text/css" rel="stylesheet" href="css/LArea.css">
+</head>
+
+<body>
+<div class="contant">
+	
+	<div class="reg-tip">
+        <img src="images/background.jpg" width="320" height="520">
+        <div class="reg-warpper">
+            <form method="post" id="myform" name="myform" action="">
+                <div class="reg-content form-horizontal clearfix" id="m_reg" novalidate="novalidate">
+                    <div class="form-group">
+                        <label for="familyname">姓名</label>
+                        <input type="text" class="form-control" id="familyname" name="familyname" check-type="required" placeholder="您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">手机</label>
+                        <input type="text" class="form-control" id="mobile" name="mobile" check-type="mobile required" placeholder="11位数字电话号码">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">城市</label>
+                        <input type="text" class="form-control" id="city" name="city" check-type="required" placeholder="选择你的城市" readonly />
+                        <input type="hidden" id="city_value"  />
+                    </div>
+                </div>
+            </form>
+            <div><button class="btn" id="btn">立即领取</button></div>
+        </div>
+    </div>    
+    <div class="wxtip" style="display:none">
+        <img src="images/background-2.jpg" width="320" height="520">
+        <!--<p class="close">X</p>
+        <div class="cenpage">
+            <p class="wxtip-txt">客服会尽快联系您，请保持手机畅通！</p>
+            <p class="code"><img src="images/code.jpg"></p>
+            <p class="wxtip-txt">卡袋宝APP下载二维码</p>
+        </div>    -->
+    </div>
+   
+    
+</div>
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/pageResponse.min.js"></script>
+<script src="js/LAreaData1.js"></script>
+<script src="js/LAreaData2.js"></script>
+<script src="js/LArea.js"></script>
+<script>
+window.onload = window.onresize = function(){
+    pageResponse({
+        selectors : '.contant', //模块选择器，使用querySelectorAll的方法
+        mode : 'auto',     // auto || contain || cover ，默认模式为auto 
+        width : '320',      //输入页面的宽度，只支持输入数值，默认宽度为320px
+        height : '520'      //输入页面的高度，只支持输入数值，默认高度为504px
+    })
+}
+//城市选择器
+var area2 = new LArea();
+    area2.init({
+        'trigger': '#city',
+        'valueTo': '#city_value',
+        'keys': {
+            id: 'value',
+            name: 'text'
+        },
+        'type': 2,
+        'data': [provs_data, citys_data, dists_data]
+    });
+
+//表单提交
+$("#btn").on("click",function(){
+	var ok1=false;
+	var ok2=false;
+	var ok3=false;
+	if (myform.familyname.value.length<1 || myform.familyname.value.length>12)
+	{
+		alert("请输入你的姓名");
+		myform.familyname.focus();
+		return false;
+	}else{
+		ok1 = true;
+	}	
+		 
+	if( myform.mobile.value.length==0) 
+	{ 
+	  alert('请输入手机号码！');
+	  myform.mobile.focus(); 
+	  return false; 
+	}     
+	if(myform.mobile.value.length!=11) 
+	{ 
+	   alert('请输入有效的手机号码！'); 
+	   myform.mobile.focus();
+	   return false; 
+	} 
+	
+	var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+	if(!myreg.test(myform.mobile.value)) 
+	{ 
+	   alert('请输入有效的手机号码！'); 
+	   myform.mobile.focus(); 
+	   return false; 
+	}else{
+		ok2 = true;
+	}	
+	
+	if (myform.city.value=="")
+	{
+		alert("请选择你的城市");
+		myform.city.focus();
+		return false;
+	}else{
+		ok3 = true;
+	}
+	
+	if(ok1 && ok2 && ok3){
+		var name = $('#familyname').val(),
+			phone = $('#mobile').val(),
+			siteid = window.location.search ? window.location.search.substr(1).match(/(^|&)_id=(\d+)/)[2] : 17;
+		var params = {'username':name, 'phone':phone, 'memo':myform.city.value,'gender':'','siteid':siteid, 'sms':0};
+		$.post('/submit.php', params, function(data){
+			var msg = '';
+			switch(data.status)
+			{
+				case 0 : msg = '提交成功'; break;
+				case 1 : msg = '已经提交过了'; break;
+				default : msg = '提交失败，请稍后重试'; break;
+			}
+			window.alert(msg);
+			$(".wxtip").fadeIn("slow");	
+		}, 'json')
+	}else{
+		return false;
+	}
+})
+
+//点击后二维码隐藏  
+$(".close").on("click",function(){
+	$(".wxtip").fadeOut("slow");
+})
+
+</script>
+
+</body>

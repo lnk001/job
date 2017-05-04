@@ -1,0 +1,120 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding:0;
+}
+
+html,body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-family: "Microsoft YaHei",SimSun,"Arial Narrow",HELVETICA,sans-serif;
+	background:#fff;
+	color:#000;	
+}
+body {
+	Font-size:62.5%;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	cursor:pointer;
+	color:#fff;
+}
+a:hover {
+	color:#fff;
+}
+
+img {
+	border: 0;
+}
+
+.m2{display:block; background:#fff; padding:2% 3%;}
+.m2 .mt{ background:url(../images/shangou.jpg) no-repeat; background-position:right center; background-size: auto 100% }
+.m2 .mt p{ width:70%;font-size:5vw; border-right:1px solid #ccc; padding-right:15px;}
+.m2 ul li{ float:left;}
+.m2 ul li span{ display:block; }
+.m2 ul li span.sp1{color:#fd9226; font-size:4em; margin-left:-8%;font-weight:bold; }
+.m2 ul li span.sp2{color:#b1b1b1; font-size:1.6em;text-decoration:line-through }
+.m2 ul li span.sp3{color:#fd9226; font-size:1.4em; padding-top:8%; padding-bottom:2%;}
+.m2 ul li span.sp4{background:#fd9226; border-radius:12px; padding:4px 6px; color:#fff;font-size:1.4em;}
+#divdown1 {font-weight:normal}
+.m2 ul li.lil{ width:30%}
+.m2 ul li.lir{ width:70%; text-align:center;}
+
+.font14{ font-size:1.4em;}
+
+.pl_leiji {
+	display:block;
+	height:24px; 
+	line-height:24px;
+	border-bottom:1px solid #dedcdd;
+	border-top:1px solid #dedcdd;  
+	background:#8f0100;
+	color:#fff;
+	padding-left:4px;
+	font-weight:800;
+	
+}
+
+.pl_title {
+	display:block;
+	width:100%; 
+	height:76px; 
+	border-bottom:1px solid #bfbfbf;
+	background:#fff;
+	font-size:1.2em;
+	overflow:hidden;	
+}
+.pl_title .pl_l{ width:22%; border-right:1px solid #eee; text-align:center; height:60px; margin-top:8px; display: inline-block;}
+.pl_title .pl_l p{height:14px;}
+.pl_title .pl_l .p2{font-size:30px; color:#ff6000; height:30px; line-height:30px; font-weight:bold;}
+
+.pl_title .pl_c{ width:7%; height:60px; display: inline-block; padding:0; color:#cecac9; overflow:hidden; background:url(../images/dajiashuo.jpg) no-repeat left top; background-position: 3px 4px; }
+
+.pl_title .pl_r{ width:66%; height:60px; display: inline-block;}
+.pl_title .pl_r .sp2 ul li{ float:left; display:block; border:1px solid #ffdbe2; border-radius:2px; padding:1px 3px; margin:6px 4px 0 0; color:#b41e4e;font-size:0.8em; }
+.pl_title .pl_r .sp2 ul li.err{  border:1px solid #e3f4ee;color:#388a74; }
+
+.myscroll { width: 100%; height: 260px; margin: 0 auto;line-height: 26px; font-size: 14px; overflow: hidden;}
+.myscroll li { height:auto; padding:0 10px; border-bottom:1px dotted #cecece; color: #4c4c4c;}
+.myscroll li .scr_h{ color:#e23956; font-weight:600;}
+.myscroll a { color: #333; text-decoration: none;}
+.myscroll a:hover { color: #ED5565; text-decoration: underline;}
+
+.bottom {
+	position: fixed;
+	bottom:0;
+	left: 0;
+	z-index: 99;
+	width: 100%;
+	height:48px;
+	line-height:48px;
+	background:#f2532b;
+	
+}
+.bottom ul li{ float:left; text-align:center}
+.bottom ul li > img{height:auto;}
+.bottom ul li.bt1{background:#efefef; border-top:1px solid #ccc; border-right:1px solid #ccc; width:19%}
+.bottom ul li.bt2{background:#efefef; border-top:1px solid #ccc; border-right:1px solid #ccc; width:19%}
+.bottom ul li.bt3{background:#efefef; border-top:1px solid #ccc; width:19%}
+.bottom ul li.bt4{background:#f2532b; width:42%; color:#fff; font-weight:bold; font-size:1.8em;}
+
+@media screen and (max-width: 320px){
+	.bottom {
+		height:40px;
+		line-height:40px;
+	}
+	.bottom ul li > img{height:auto; width:86%}
+}

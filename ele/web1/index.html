@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="copyright" content="Copyright (c) 2016 optaim.">
+<meta name="description" content="饿了么">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<title>饿了么</title>
+</head>
+<body>
+<div class="pagebox">
+	<p class="logo"><img src="images/logo.png"></p> 
+    <p class="xiaoren"><img src="images/t-2.png"></p> 
+    <p class="xiaoshou"><img src="images/t-3.png"></p>
+    <p class="wenan"><img src="images/t-1.png"></p>
+    <a href="" id="btn"><p class="btn">立刻下载</p></a>
+    
+    <!--微信端提示下载弹出层-->
+    <div class="wxtip" id="JweixinTip" style="display: none;">
+		<span class="wxtip-icon"></span>
+		<p class="wxtip-txt">点击右上角<br>选择在浏览器中打开</p>
+	</div>
+    <!--判断手机横竖屏状态-->
+    <div class="shuping" id="shuping" style="display:none">
+		<p class="shuping-txt">请在竖屏模式下浏览</p>
+	</div>
+</div>
+<script>
+
+//判断访问终端
+var btn = document.getElementById("btn"); 
+btn.onclick = function(e) { 
+	var androidURL = "http://down1.downxia.com/down/apk/tele.apk";
+	var iosURL = "https://itunes.apple.com/cn/app/e-le-me-eleme-wai-mai-ding/id507161324?mt=8";
+	var browser={
+		versions:function(){
+			var u = navigator.userAgent, app = navigator.appVersion;
+			return {
+				trident: u.indexOf('Trident') > -1, //IE内核
+				presto: u.indexOf('Presto') > -1, //opera内核
+				webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+				gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+				mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+				ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+				android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+				iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+				iPad: u.indexOf('iPad') > -1, //是否iPad
+				webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+				weixin: u.indexOf('MicroMessenger') > -1, //是否微信 （2015-01-22新增）
+				qq: u.match(/\sQQ/i) == " qq" //是否QQ
+			};
+		}(),
+		language:(navigator.browserLanguage || navigator.language).toLowerCase()
+	}
+	 
+	if(browser.versions.weixin){
+		window.event ? window.event.returnValue = false : e.preventDefault();
+		document.getElementById('JweixinTip').style.display='block';
+		if(browser.versions.iPhone||browser.versions.iPad){
+			btn.href = iosURL;
+			return false;
+		}
+		else{
+			btn.href = androidURL;
+			return false;
+		}
+		document.getElementById('JweixinTip').onclick=function(){
+			this.style.display='none';
+		}
+	}
+	
+	if(browser.versions.android){
+		document.location.href = androidURL;
+		//window.open(androidURL);
+		return false;
+	}
+	else if(browser.versions.iPhone||browser.versions.iPad){
+		window.location.href = iosURL;
+		return false;
+	}
+	else{
+		window.location.href = androidURL;
+		return false;
+	}
+}
+
+//判断手机横竖屏状态：  
+function hengshuping(){  
+  if(window.orientation==180||window.orientation==0){  
+        document.getElementById('shuping').style.display='none';    
+   }  
+if(window.orientation==90||window.orientation==-90){  
+        document.getElementById('shuping').style.display='block';  
+    }  
+ }  
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);  
+  
+//移动端的浏览器一般都支持window.orientation这个参数，通过这个参数可以判断出手机是处在横屏还是竖屏状态。  
+//从而根据实际需求而执行相应的程序。通过添加监听事件onorientationchange，进行执行就可以了。  
+</script>  
+</body>
+</html>
+
+
+
+              
