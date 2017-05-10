@@ -1,0 +1,487 @@
+html,body,ul,ol,li,p,h1,h2,h3,h4,h5 {
+	margin:0;
+	padding:0
+}
+body {
+	text-align:center;
+	overflow:hidden;
+	background:#fff;
+	background:#F7FAFC;
+	font-size:100%;
+	font-family:"Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+	position:relative;
+	margin: 0;
+}
+button,input,select,textarea {
+	margin:0;
+	font-family:inherit;
+	font-size:100%;
+	outline:none;
+}
+img {
+	border:0
+}
+a {
+	color:#393939;
+	text-decoration:none
+}
+#login-wrapper {
+	width:90%;
+	max-width:1280px;
+	margin:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+}
+header {
+	width:100%;
+	height:50px;
+	line-height:50px;
+}
+header .hd-logo {
+	position: absolute;
+	left: 0;
+	width:60%;
+	height: 50px;
+	background:url(../images/lg-logo.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:left center;
+	display: none;
+}
+header .optaimweb {
+	position: absolute;
+	right: 0;
+	width:40%;
+	text-align:right;
+}
+header .optaimweb a {
+	display:inline-block;
+	height:25px;
+	line-height:25px;
+	padding-left:25px;
+	background:url(../images/lg-arr.png) no-repeat;
+}
+.login-box {
+	position:absolute;
+	top:10%;
+	left:50%;
+	width:50%;
+	margin-left:-25%;
+	height:80%;
+}
+.login-box .lg-logo {
+	width:60%;
+	height:150px;
+	background:url(../images/lg-logo.png);
+}
+.login-box .lg-brand {
+	width:100%;
+	height:460px;
+	background:url(../images/lg-brand.png);
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
+	-o-transition:all 1s;
+}
+.login-box .lg-logo,.login-box .lg-brand {
+	display:block;
+	margin:0 auto;
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:center center;
+}
+.login-box .login-btn {
+	display:inline-block;
+	margin:0 auto;
+	width:240px;
+	height:34px;
+	line-height:34px;
+	color:#fff;
+	border-radius:16px;
+	background-color:#2ea7df;
+	cursor:pointer;
+	transition:all 0.6s;
+	-webkit-transition:all 0.6s;
+}
+.login-box .lg-brand:hover,.login-box .login-btn:hover {
+	transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+}
+/*登录对话框*/
+.speak_window {
+	position:relative;
+	top:50%;
+	left:50%;
+	overflow-y: scroll;
+	width:310px;
+	margin-left:-155px;
+	height:450px;
+	margin-top:-260px;
+	overflow: hidden;
+	display: none;
+	border:0px #ff6600 solid;	
+}
+.speak_box{
+	position: absolute;
+	left: 0;
+	bottom: 80px;
+	width: 100%;
+}
+
+.wenwen_text {
+	height:40px;
+	border-radius:5px;
+	border:solid 1px #636162;
+	box-sizing:border-box;
+	width:66%;
+	text-align:center;
+	overflow:hidden;
+	margin-left:2%;
+}
+.write_box {
+	background:#fff;
+	width:100%;
+	height:40px;
+	line-height:40px;
+}
+.write_box input {
+	height:40px;
+	padding:0 5px;
+	line-height:40px;
+	width:100%;
+	box-sizing:border-box;
+	border:0;
+}
+
+.question,.answer{
+	margin-top:1rem;
+}
+.question {
+	text-align:right;
+}
+.question>div {
+	display:inline-block;
+}
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.clear {
+	clear:both;
+}
+.heard_img {
+	height:30px;
+	width:30px;
+	overflow:hidden;
+}
+.heard_img img {
+	width:100%;
+	height:100%
+}
+.question_text,.answer_text {
+	box-sizing:border-box;
+	position:relative;
+	display:table-cell;
+	min-height:30px;
+}
+.question_text {
+	padding-right:20px;
+}
+.answer_text {
+	padding-left:20px;
+}
+.question_text p,.answer_text p {
+	border-radius:16px;
+	padding:.3rem .8rem;
+	margin:0;
+	font-size:14px;
+	line-height:20px;
+	text-align:left;
+	word-wrap:break-word;
+}
+.answer_text p {
+	background:#f1f0f0;
+}
+.answer_text p img{
+	display: block;
+	height: 35px;
+}
+.question_text p {
+	background:#2ea7df;
+	color:#fff;
+	
+}
+.question_text i,.answer_text i {
+	width:0;
+	height:0;
+	border-top:5px solid transparent;
+	border-bottom:5px solid transparent;
+	position:absolute;
+	top:9px;
+}
+.answer_text i {
+	border-right:8px solid #f1f0f0;
+	left:14px;
+}
+.question_text i {
+	border-left:8px solid #2ea7df;
+	right:14px;
+}
+.wenwen-footer {
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+.wenwen-footer input{
+	display: none
+}
+.wenwen-footer ._show{
+	display:block
+}
+
+.prompt_text p{
+	position:absolute;
+	left:0;
+	bottom:44px;
+	color: #fff;
+	border-radius:16px;
+	padding:.3rem .8rem;
+	font-size:14px;
+	background-color: #7a909b;
+	display: none;
+}
+.wenwen-footer input {
+	border:1px solid #c9c9c9;
+	width:250px;
+	height:36px;
+	line-height:36px;
+	border-radius:18px;
+	padding:0 40px 0 15px
+}
+.wenwen-footer .up-ico {
+	position:absolute;
+	right:7px;
+	bottom:4px;
+	display:inline-block;
+	width:30px;
+	height:30px;
+	line-height:30px;
+	background-color:#2ea7df;
+	border:none;
+	border-radius:50%;
+	color:#fff;
+	cursor: pointer
+}
+.wenwen-footer .submit-btn{
+	display:none;
+	margin:0 auto;
+	width:240px;
+	height:34px;
+	line-height:34px;
+	color:#fff;
+	border-radius:16px;
+	background-color:#2ea7df;
+	cursor:pointer;
+}
+@media screen and (max-width:1024px) {
+	.login-box {
+		top:10%;
+		left:50%;
+		width:100%;
+		margin-left:-50%;
+	}
+	.login-box .lg-logo {
+		width:60%;
+		height:100px;
+	}
+	.login-box .lg-brand {
+		height:520px;
+	}
+}
+@media screen and (max-width:640px) {
+	.login-box {
+		top:12%;
+		left:50%;
+		width:100%;
+		margin-left:-50%;
+	}
+	.login-box .lg-logo {
+		width:60%;
+		height:80px;
+	}
+	.login-box .lg-brand {
+		height:300px;
+	}
+	.login-box .login-btn {
+		width:120px;
+		height:28px;
+		line-height:28px;
+	}
+}
+@media screen and (max-width:320px){
+	.speak_window {
+		width:300px;
+		margin-left:-150px;
+		height:400px;
+		margin-top:-230px
+	}
+	.wenwen-footer input {
+		width: 240px;
+		
+	}
+}
+
+/*动画*/
+/*调用名称为fade-in的动画，全程动画显示时间4S，进入方式为ease，延时0S进入，播放次数1次*/
+.fade-in-words {
+	opacity:0;
+    animation:fade-in 4s ease 0s 1;
+    -webkit-animation:fade-in 4s ease 0s 1;
+    animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+@-webkit-keyframes fade-in {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+
+@-webkit-keyframes fadeOutUp {
+	0% {
+		opacity:1;
+		-webkit-transform:translateY(0);
+		transform:translateY(0)
+	}
+	100% {
+		opacity:0;
+		-webkit-transform:translateY(-20px);
+		transform:translateY(-20px)
+	}
+}
+@keyframes fadeOutUp {
+	0% {
+		opacity:1;
+		-webkit-transform:translateY(0);
+		-ms-transform:translateY(0);
+		transform:translateY(0)
+	}
+	100% {
+		opacity:0;
+		-webkit-transform:translateY(-20px);
+		-ms-transform:translateY(-20px);
+		transform:translateY(-20px)
+	}
+}
+.fadeOutUp-words {
+	animation: fadeOutUp 1s ease 0s 1 both;
+	-webkit-animation: fadeOutUp 1s ease 0s 1 both;
+}
+
+@-webkit-keyframes bounceIn {
+	0% {
+		opacity:0;
+		-webkit-transform:scale(.3);
+		transform:scale(.3)
+	}
+	50% {
+		opacity:1;
+		-webkit-transform:scale(1.05);
+		transform:scale(1.05)
+	}
+	70% {
+		-webkit-transform:scale(.9);
+		transform:scale(.9)
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:scale(1);
+		transform:scale(1)
+	}
+}
+@keyframes bounceIn {
+	0% {
+		opacity:0;
+		-webkit-transform:scale(.3);
+		-ms-transform:scale(.3);
+		transform:scale(.3)
+	}
+	50% {
+		opacity:1;
+		-webkit-transform:scale(1.05);
+		-ms-transform:scale(1.05);
+		transform:scale(1.05)
+	}
+	70% {
+		-webkit-transform:scale(.9);
+		-ms-transform:scale(.9);
+		transform:scale(.9)
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:scale(1);
+		-ms-transform:scale(1);
+		transform:scale(1)
+	}
+}
+.bounceIn-words {
+	animation: bounceIn 1s ease 0s 1 both;
+	-webkit-animation: bounceIn 1s ease 0s 1 both;
+}
+
+@-webkit-keyframes zoomInUp {
+	0% {
+		opacity:0;
+		-webkit-transform:scale(.1) translateY(2000px);
+		transform:scale(.1) translateY(2000px);
+		-webkit-animation-timing-function:ease-in-out;
+		animation-timing-function:ease-in-out
+	}
+	60% {
+		opacity:1;
+		-webkit-transform:scale(.475) translateY(-60px);
+		transform:scale(.475) translateY(-60px);
+		-webkit-animation-timing-function:ease-out;
+		animation-timing-function:ease-out
+	}
+}
+@keyframes zoomInUp {
+	0% {
+		opacity:0;
+		-webkit-transform:scale(.1) translateY(2000px);
+		-ms-transform:scale(.1) translateY(2000px);
+		transform:scale(.1) translateY(2000px);
+		-webkit-animation-timing-function:ease-in-out;
+		animation-timing-function:ease-in-out
+	}
+	60% {
+		opacity:1;
+		-webkit-transform:scale(.475) translateY(-60px);
+		-ms-transform:scale(.475) translateY(-60px);
+		transform:scale(.475) translateY(-60px);
+		-webkit-animation-timing-function:ease-out;
+		animation-timing-function:ease-out
+	}
+}
+.zoomInUp-words {
+	animation: zoomInUp 1s ease 0s 1 both;
+	-webkit-animation: zoomInUp 1s ease 0s 1 both;
+}
+

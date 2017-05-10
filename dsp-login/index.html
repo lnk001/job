@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>DSP登录</title>
+	<meta name="keywords" content="DSP登录" />
+	<meta name="description" content="DSP登录" />
+	<link href="css/login.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div id="login-wrapper">
+		<header>
+			<div class="optaimweb"><a href="http://www.optaim.com" target="_blank">智云众官网</a></div>
+			<div class="hd-logo"></div>
+		</header>
+
+		<div class="login-box">
+			<div class="lg-logo"></div>
+			<div class="lg-brand"></div>
+			<div class="login-btn" id="login-btn">开启精准</div>
+		</div>
+		
+		<!--登录聊天框-->
+		<div class="speak_window">
+			<div class="speak_box bounceIn-words">
+				<div class="heard_img left"><img src="images/lg-photo-l.png"></div>
+				<div class="answer_text">
+					<p>请输入用户名</p>
+					<i></i>
+				</div>
+			</div>
+			
+			<div class="wenwen-footer fade-in-words">
+				<div class="prompt_text"><p>找回密码</p></div>
+				<input type="text" name="username" id="username" class="_show" placeholder="请输入用户名" onkeypress="if(event.keyCode==13) { up_say(); return false;}" />
+				<input type="password" name="password" id="passwd" placeholder="请输入密码" onkeypress="if(event.keyCode==13) { up_say(); return false;}"/>
+				<input type="text" name="captcha" id="captcha" placeholder="请输入验证码" onkeypress="if(event.keyCode==13) { up_say(); return false;}"/>
+				<button onClick="up_say()" class="up-ico">&#8593;</button>
+				<div class="submit-btn" id="submit">进入DSP</div>
+			</div>
+			
+		</div>
+
+		
+	</div>
+	<canvas id="Mycanvas"></canvas>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>
